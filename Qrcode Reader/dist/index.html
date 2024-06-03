@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Reader and Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="headline">QR Code Reader & Generator</h1>
+        <p id="description">Effortlessly create and scan QR codes with our intuitive tool. Whether you need to share a website link or encode data securely, our QR code generator and reader have you covered. Simply generate a code or scan one in seconds!</p>
+        <div class="qr-section">
+            <div class="qr-generator">
+                <h2>Generate QR Code</h2>
+                <input type="text" id="qr-input" placeholder="Enter text or URL">
+                <button id="generate-btn">Generate</button>
+                <a id="download-btn" href="#" class="download-btn" download="qr-code.png">Download QR Code</a>
+                <div id="qr-code"></div>
+            </div>
+            <div class="qr-reader">
+                <h2>Scan QR Code</h2>
+                <video id="video" width="300" height="300"></video>
+                <button id="start-btn">Start Scanning</button>
+                <input type="file" id="file-input" accept="image/*" class="choosefile">
+                <p id="output"></p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsqr/dist/jsQR.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
